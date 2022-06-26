@@ -69,16 +69,17 @@ function deleteNote(note) {
     showNotes();
 }
 
+//funkcija update'inti
 function updateNote(noteId, title, description) {
     updateId = noteId;
     isUpdate = true;
     addBox.click();
     titleTag.value = title;
     textArea.value = description;
-    popupTitle.innerText = "Atnaujinkite įrašą";
     addBtn.innerText = "Atnaujinti";
 }
 
+//pridedama prie local storage
 addBtn.addEventListener("click", e => {
     e.preventDefault();
     const title = titleTag.value.trim(),
