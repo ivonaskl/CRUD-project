@@ -1,5 +1,4 @@
 /* Import Google Font - Poppins */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 *{
   margin: 0;
   padding: 0;
@@ -200,5 +199,18 @@ form button{
   cursor: pointer;
   font-size: 17px;
   border-radius: 4px;
-  background: #6A93F8;
+  background: #f3768b;
+}
+
+h1{
+  padding: 10px 20px;
+}
+
+.close{
+  display: flex;
+  justify-content: end;
+  font-size: 30px;
+  padding-right: 10px;
+  padding-top: 10px;
+  cursor: pointer;
 }
