@@ -27,7 +27,6 @@ closeIcon.addEventListener("click", () => {
 
 //formos trafaretas:
 function showNotes() {
-    //kad nesidubliuotų
     document.querySelectorAll(".note").forEach(li => li.remove());
     notes.forEach((note, id) => {
         const liTag = `<li class="note">
@@ -57,15 +56,10 @@ function showMenu(elem) {
 
 //ištrinimo funkcija
 function deleteNote(note) {
-    //deklaruojame kintamąjį
     const deleteNote = confirm("Ar norite ištrinti šį įrašą?");
-    //jei nenorime ištrinti funckijos, grąžinama:
     if(!deleteNote) return;
-    //ta pati seka, bet ištrintas pasiirnktas įrašas
     notes.splice(note, 1);
-    //atnaujinama localstorage
     localStorage.setItem("notes", JSON.stringify(notes));
-    //parodome likusius notes
     showNotes();
 }
 
@@ -79,7 +73,7 @@ function updateNote(noteId, title, description) {
     addBtn.innerText = "Atnaujinti";
 }
 
-//pridedama prie local storage
+//sutikrinimas ir pushinimas į local storage
 addBtn.addEventListener("click", e => {
     e.preventDefault();
     const title = titleTag.value.trim(),
