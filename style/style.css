@@ -1,10 +1,9 @@
-/* Import Google Font - Poppins */
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
 }
+
 body{
   background: linear-gradient(90deg, #cfecd0, #ffc5ca);
 }
